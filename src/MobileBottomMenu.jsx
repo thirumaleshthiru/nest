@@ -10,31 +10,31 @@ const MobileBottomMenu = () => {
   const menuItems = [
     {
       icon: Home,
-      label: 'Home',
+   
       path: '/',
       isActive: location.pathname === '/'
     },
     {
       icon: CreditCard,
-      label: 'Loan',
+ 
       path: '/loan',
       isActive: location.pathname === '/loan'
     },
     {
       icon: null, // QR button will be handled separately
-      label: 'QR',
+     
       path: null,
       isQR: true
     },
     {
       icon: TrendingUp,
-      label: 'Analytics',
+    
       path: '/analytics',
       isActive: location.pathname === '/analytics'
     },
     {
       icon: Receipt,
-      label: 'Transactions',
+  
       path: '/transactions',
       isActive: location.pathname === '/transactions'
     }
@@ -106,11 +106,7 @@ const MobileBottomMenu = () => {
                       item.isActive ? 'scale-110' : ''
                     }`} />
                   </div>
-                  <span className={`text-xs font-medium transition-all ${
-                    item.isActive ? 'font-semibold' : ''
-                  }`}>
-                    {item.label}
-                  </span>
+                
                   {item.isActive && (
                     <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-teal-500 rounded-full"></div>
                   )}
